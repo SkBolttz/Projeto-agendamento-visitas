@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>Agendar Visita</title>
+    <link rel="stylesheet" href="../../CSS/Visita/agendarVisita.css" />
+    <link rel="stylesheet" href="../../CSS/Geral/global.css">
+    <script src="../../JS/Visita/agendarVisita.js"></script>
+    <script src="../../JS/Geral/global.js"></script>
+    <script src="../../JS/Geral/configuracoes.js"></script>
+    <link rel="stylesheet" href="../../CSS/Geral/slidebar.css" />
+</head>
+<body>
+    <header>
+        <div class="user-info">
+          <span>Bem-vindo, <strong><span id="username">Usuário</span></strong></span>
+          <button type="button" class="logout-btn" onclick="sair()">Sair</button>
+          <button class="open-sidebar-btn" onclick="toggleSidebar()">☰ Menu</button>
+    
+          <div id="sidebar" class="sidebar">
+            <button class="close-btn" onclick="toggleSidebar()">×</button>
+            <ul>
+              <li><a href="../Geral/telaInicial.html">🏠 Início</a></li>
+              <li><a href="../Visita/agendarVisita.html">📅 Agendar Visita</a></li>
+              <li><a href="../Geral/telaInicial.html">📋 Minhas Visitas</a></li>
+              <li><a href="../Visitante/cadastro-visitante.html">👤 Cadastrar Visitante</a></li>
+              <li><a href="../Empresa/cadastro-empresa.html">🏢 Cadastrar Empresa</a></li>
+              <li><a href="../Geral/configuracao.html">⚙️ Configurações</a></li>
+              <p><strong>Empresa:</strong></p>
+              <li><a href="../Empresa/atualizarEmpresa.html">🏢 Alterar Cadastro</a></li>
+              <li><a href="../Empresa/desativarEmpresa.html">🏢 Desativar Empresa</a></li>
+              <li><a href="../Empresa/buscarEmpresa.html">🏢 Buscar Empresa</a></li>
+              <li><a href="../Empresa/reativarEmpresa.html">🏢 Reativar Empresa</a></li>
+              <p><strong>Visitante:</strong></p>
+              <li><a href="../Visitante/atualizarVisitante.html">👤 Alterar Visitante</a></li>
+              <li><a href="../Visitante/desativarVisitante.html">👤 Desativar Visitante</a></li>
+              <li><a href="../Visitante/buscarVisitante.html">👤 Buscar Visitante</a></li>
+              <li><a href="../Visitante/reativarVisitante.html">👤 Reativar Visitante</a></li>
+              <p><strong>Visita:</strong></p>
+              <li><a href="../Visita/consultarVisita.html">📋 Consultar Visita</a></li>
+              <li><a href="../Visita/cancelarVisita.html">📋 Cancelar Visita</a></li>
+              <li><a href="../Visita/atualizarVisita.html">📋 Atualizar Status</a></li>
+            </ul>
+          </div>
+        </div>
+        
+      </header>
+
+    <div class="form-container">
+        <h2>Agendar Nova Visita</h2>
+        <form id="agendarForm">
+            <div class="form-group">
+                <label for="visitante">Nome do Visitante</label>
+                <input type="text" id="visitante" name="visitante" required />
+            </div>
+            <div class="form-group">
+                <label for="dataHora">Horário da Visita</label>
+                <input type="datetime-local" id="dataHora" name="dataHora" required />
+            </div>
+            <div>
+                <p><p id="sucesso">Visita agendada com sucesso!</p></p>
+            </div>
+            <div>
+                <p id="erroCadastroVisitante">🔴 Visitante nao cadastrado!</p>
+            </div>
+            <div>
+                <p id="erroCadastro">🔴 Erro ao agendar visita</p>
+            </div>
+            <div>
+                <p id="erroHoraAgendamento">🔴 Hora agendada ja cadastrada!</p>
+            </div>
+            <div>
+                <p id="erroAgendamentoRetroativo">🔴 Agendamento Retroativo!</p>
+            </div>
+            <div>
+                <p id="erroMultiplosAgendamentos">🔴 isitante com Múltiplos Agendamentos no Mesmo Horário!</p>
+            </div>
+            <div>
+                <p id="erroLimiteAgendamento">🔴 Limite de Visitas por Período!</p>
+            </div>
+            <div>
+                <p id="erroAgendamentoProximo">🔴 Agendamento Muito Próximo do Horário Atual!</p>
+            </div>
+            <button type="submit" class="buttonConfirm">Agendar</button>
+        </form>
+        <a class="voltar-link" href="../Geral/telaInicial.html">← Voltar</a> 
+       </div>
+       <footer class="footer">
+        <p>&copy; 2023 Sistema de Visitas Empresariais. Todos os direitos reservados.</p>
+      </footer>
+</body>
+</html>

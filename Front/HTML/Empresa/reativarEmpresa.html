@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <title>Reativar Empresa</title>
+  <link rel="stylesheet" href="../../CSS/Empresa//reativarEmpresa.css">
+  <link rel="stylesheet" href="../../CSS/Geral/global.css">
+  <link rel="stylesheet" href="../../CSS/Geral/slidebar.css">
+  <script src="../../JS/Geral/global.js"></script>
+  <script src="../../JS/Geral/configuracoes.js"></script>
+  <script src="../../JS/Empresa/reativarEmpresa.js"></script>
+  
+</head>
+<body>
+  <header>
+    <div class="user-info">
+      <span>Bem-vindo, <strong><span id="username">Usuário</span></strong></span>
+      <button type="button" class="logout-btn" onclick="sair()">Sair</button>
+      <button class="open-sidebar-btn" onclick="toggleSidebar()">☰ Menu</button>
+
+      <div id="sidebar" class="sidebar">
+        <button class="close-btn" onclick="toggleSidebar()">×</button>
+        <ul>
+          <li><a href="../Geral/telaInicial.html">🏠 Início</a></li>
+          <li><a href="../Visita/agendarVisita.html">📅 Agendar Visita</a></li>
+          <li><a href="../Geral/telaInicial.html">📋 Minhas Visitas</a></li>
+          <li><a href="../Visitante/cadastro-visitante.html">👤 Cadastrar Visitante</a></li>
+          <li><a href="../Empresa/cadastro-empresa.html">🏢 Cadastrar Empresa</a></li>
+          <li><a href="../Geral/configuracao.html">⚙️ Configurações</a></li>
+          <p><strong>Empresa:</strong></p>
+          <li><a href="../Empresa/atualizarEmpresa.html">🏢 Alterar Cadastro</a></li>
+          <li><a href="../Empresa/desativarEmpresa.html">🏢 Desativar Empresa</a></li>
+          <li><a href="../Empresa/buscarEmpresa.html">🏢 Buscar Empresa</a></li>
+          <li><a href="../Empresa/reativarEmpresa.html">🏢 Reativar Empresa</a></li>
+          <p><strong>Visitante:</strong></p>
+          <li><a href="../Visitante/atualizarVisitante.html">👤 Alterar Visitante</a></li>
+          <li><a href="../Visitante/desativarVisitante.html">👤 Desativar Visitante</a></li>
+          <li><a href="../Visitante/buscarVisitante.html">👤 Buscar Visitante</a></li>
+          <li><a href="../Visitante/reativarVisitante.html">👤 Reativar Visitante</a></li>
+          <p><strong>Visita:</strong></p>
+          <li><a href="../Visita/consultarVisita.html">📋 Consultar Visita</a></li>
+          <li><a href="../Visita/cancelarVisita.html">📋 Cancelar Visita</a></li>
+          <li><a href="../Visita/atualizarVisita.html">📋 Atualizar Status</a></li>
+        </ul>
+      </div>
+    </div>
+    
+  </header>
+
+  <main>
+    <div class="container">
+      <h2>Reativar Empresa</h2>
+
+      <form id="reativarForm">
+
+        <div class="form-group">
+        <label for="razaoSocial" class="label-title">Razão Social:</label>
+        <input type="text" name="razaoSocial" id="razaoSocial" placeholder="Digite a Razão Social" required autofocus>
+      </div>
+        <div>
+          <p class="sucesso">Empresa Reativada com sucesso!</p>
+        </div>
+      
+        <div>
+          <p class="erroReativar">🔴 Erro ao reativar empresa, verifique os dados!</p>
+        </div>
+      
+        <button type="submit" class="buttonDecline" style="margin-top: 20px;">Confirmar Reativação</button>
+      </form>
+      
+      <a class="voltar-link" href="../Geral/telaInicial.html">← Voltar</a>
+        </div>
+  </main>
+  <footer class="footer">
+    <p>&copy; 2023 Sistema de Visitas Empresariais. Todos os direitos reservados.</p>
+  </footer>
+</body>
+</html>

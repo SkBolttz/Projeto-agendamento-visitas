@@ -1,0 +1,70 @@
+
+main {
+    padding: 40px 20px;
+    text-align: center;
+}
+
+main h2 {
+    font-size: 28px;
+    color: #2c3e50;
+    margin-bottom: 10px;
+}
+
+main p {
+    color: #666;
+    margin-bottom: 30px;
+}
+
+.cards {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    flex-wrap: wrap;
+}
+
+.card {
+    background-color: white;
+    border: 1px solid #ddd;
+    padding: 30px 40px;
+    border-radius: 10px;
+    text-decoration: none;
+    color: #2c3e50;
+    font-weight: bold;
+    font-size: 18px;
+    transition: all 0.3s;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+}
+
+.card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 12px rgba(0,0,0,0.1);
+    background-color: #f9f9f9;
+}
+
+.lista-visitas {
+    background-color: white;
+    font-size: 1.2em;
+    padding: 20px;
+    margin: 30px auto;
+    border-radius: 10px;
+    background-size:300px 300px;
+    background-position: center;
+    background-repeat: no-repeat;
+    color: black;
+    text-align: center;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    max-width: 1005px;
+}
+
+.linha-visita {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px; 
+    margin-bottom: 15px;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.2); 
+    padding-bottom: 10px;
+}
+
+.linha-visita:last-child {
+    border-bottom: none;
+}

@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+  <meta charset="UTF-8">
+  <title>Consulta de Visita</title>
+  <link rel="stylesheet" href="../../CSS/Visita/consultarVisita.css">
+  <link rel="stylesheet" href="../../CSS/Geral/global.css" />
+  <link rel="stylesheet" href="../../CSS/Geral/slidebar.css" />
+  <script src="../../JS/Geral/global.js"></script>
+  <script src="../../JS/Geral/configuracoes.js"></script>
+  <script src="../../JS/Visita/consultarVisita.js"></script>
+</head>
+
+<body>
+  <header>
+    <div class="user-info">
+      <span>Bem-vindo, <strong><span id="username">Usuário</span></strong></span>
+      <button type="button" class="logout-btn" onclick="sair()">Sair</button>
+      <button class="open-sidebar-btn" onclick="toggleSidebar()">☰ Menu</button>
+
+      <div id="sidebar" class="sidebar">
+        <button class="close-btn" onclick="toggleSidebar()">×</button>
+        <ul>
+          <li><a href="../Geral/telaInicial.html">🏠 Início</a></li>
+          <li><a href="../Visita/agendarVisita.html">📅 Agendar Visita</a></li>
+          <li><a href="../Geral/telaInicial.html">📋 Minhas Visitas</a></li>
+          <li><a href="../Visitante/cadastro-visitante.html">👤 Cadastrar Visitante</a></li>
+          <li><a href="../Empresa/cadastro-empresa.html">🏢 Cadastrar Empresa</a></li>
+          <li><a href="../Geral/configuracao.html">⚙️ Configurações</a></li>
+          <p><strong>Empresa:</strong></p>
+          <li><a href="../Empresa/atualizarEmpresa.html">🏢 Alterar Cadastro</a></li>
+          <li><a href="../Empresa/desativarEmpresa.html">🏢 Desativar Empresa</a></li>
+          <li><a href="../Empresa/buscarEmpresa.html">🏢 Buscar Empresa</a></li>
+          <li><a href="../Empresa/reativarEmpresa.html">🏢 Reativar Empresa</a></li>
+          <p><strong>Visitante:</strong></p>
+          <li><a href="../Visitante/atualizarVisitante.html">👤 Alterar Visitante</a></li>
+          <li><a href="../Visitante/desativarVisitante.html">👤 Desativar Visitante</a></li>
+          <li><a href="../Visitante/buscarVisitante.html">👤 Buscar Visitante</a></li>
+          <li><a href="../Visitante/reativarVisitante.html">👤 Reativar Visitante</a></li>
+          <p><strong>Visita:</strong></p>
+          <li><a href="../Visita/consultarVisita.html">📋 Consultar Visita</a></li>
+          <li><a href="../Visita/cancelarVisita.html">📋 Cancelar Visita</a></li>
+          <li><a href="../Visita/atualizarVisita.html">📋 Atualizar Status</a></li>
+        </ul>
+      </div>
+    </div>
+
+  </header>
+
+  <main>
+    <div class="container">
+      <h2>Consulta de Visita</h2>
+      <form id="formConsultaVisita">
+        <div class="form-group">
+          <div class="label-title">Código de Visita:</div>
+          <label class="label-value">
+          <input type="text" id="codigoVisita" name="codigoVisita" required placeholder="Código de Visita">
+        </label>
+        </div>
+
+        <div>
+          <p>
+          <p id="erroConsulta">🔴 Visita nao encontrada!</p>
+          </p>
+        </div>
+        <div class="label-group">
+          <div class="label-title">Visitante:</div>
+          <label class="label-value" id="visitante"></label>
+        </div>
+
+        <div class="label-group">
+          <div class="label-title">Data/Hora Agendada:</div>
+          <label class="label-value" id="dataHoraAgendada"></label>
+        </div>
+
+        <div class="label-group">
+          <div class="label-title">Data/Hora Entrada:</div>
+          <label class="label-value" id="dataHoraEntrada"></label>
+        </div>
+
+        <div class="label-group">
+          <div class="label-title">Data/Hora Saída:</div>
+          <label class="label-value" id="dataHoraSaida"></label>
+        </div>
+
+        <div class="label-group">
+          <div class="label-title">Status do Agendamento:</div>
+          <label class="label-value" id="statusAgendamento"></label>
+        </div>
+
+        <div class="label-group">
+          <div class="label-title">Ativo:</div>
+          <label class="label-value" id="status"></label>
+        </div>
+
+        <div>
+          <button type="submit" class="buttonConfirm">Buscar</button>
+        </div>
+      </form>
+      <a class="voltar-link" href="../Geral/telaInicial.html">← Voltar</a>
+    </div>
+  </main>
+  <footer class="footer">
+    <p>&copy; 2023 Sistema de Visitas Empresariais. Todos os direitos reservados.</p>
+  </footer>
+</body>
+
+</html>

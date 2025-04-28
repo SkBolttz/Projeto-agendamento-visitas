@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <title>Buscar Empresa</title>
+  <link rel="stylesheet" href="../../CSS/Empresa/buscarEmpresa.css">
+  <link rel="stylesheet" href="../../CSS/Geral/global.css">
+  <link rel="stylesheet" href="../../CSS/Geral/slidebar.css">
+  <script src="../../JS/Geral/global.js"></script>
+  <script src="../../JS/Geral/configuracoes.js"></script>
+  <script src="../../JS/Empresa/buscarEmpresa.js"></script>
+</head>
+<body>
+  <header>
+    <div class="user-info">
+      <span>Bem-vindo, <strong><span id="username">Usuário</span></strong></span>
+      <button type="button" class="logout-btn" onclick="sair()">Sair</button>
+      <button class="open-sidebar-btn" onclick="toggleSidebar()">☰ Menu</button>
+
+      <div id="sidebar" class="sidebar">
+        <button class="close-btn" onclick="toggleSidebar()">×</button>
+        <ul>
+          <li><a href="../Geral/telaInicial.html">🏠 Início</a></li>
+          <li><a href="../Visita/agendarVisita.html">📅 Agendar Visita</a></li>
+          <li><a href="../Geral/telaInicial.html">📋 Minhas Visitas</a></li>
+          <li><a href="../Visitante/cadastro-visitante.html">👤 Cadastrar Visitante</a></li>
+          <li><a href="../Empresa/cadastro-empresa.html">🏢 Cadastrar Empresa</a></li>
+          <li><a href="../Geral/configuracao.html">⚙️ Configurações</a></li>
+          <p><strong>Empresa:</strong></p>
+          <li><a href="../Empresa/atualizarEmpresa.html">🏢 Alterar Cadastro</a></li>
+          <li><a href="../Empresa/desativarEmpresa.html">🏢 Desativar Empresa</a></li>
+          <li><a href="../Empresa/buscarEmpresa.html">🏢 Buscar Empresa</a></li>
+          <li><a href="../Empresa/reativarEmpresa.html">🏢 Reativar Empresa</a></li>
+          <p><strong>Visitante:</strong></p>
+          <li><a href="../Visitante/atualizarVisitante.html">👤 Alterar Visitante</a></li>
+          <li><a href="../Visitante/desativarVisitante.html">👤 Desativar Visitante</a></li>
+          <li><a href="../Visitante/buscarVisitante.html">👤 Buscar Visitante</a></li>
+          <li><a href="../Visitante/reativarVisitante.html">👤 Reativar Visitante</a></li>
+          <p><strong>Visita:</strong></p>
+          <li><a href="../Visita/consultarVisita.html">📋 Consultar Visita</a></li>
+          <li><a href="../Visita/cancelarVisita.html">📋 Cancelar Visita</a></li>
+          <li><a href="../Visita/atualizarVisita.html">📋 Atualizar Status</a></li>
+        </ul>
+      </div>
+    </div>
+    
+  </header>
+
+  <main>
+    <div class="container">
+      <form id="buscarForm" class="buscarForm">
+        <h2>Buscar Empresa</h2>
+      
+        <div class="form-group">
+          <div class="label-title">Razão Social:</div>
+          <label class="label-value">
+            <input type="text" id="razaoSocial" required placeholder="Razão Social" autofocus>
+          </label>
+        </div>
+      
+        <div>
+          <p id="erroBuscar" class="erroBuscar">🔴 Erro ao buscar empresa, verifique os dados!</p>
+        </div>
+      
+        <div class="label-group">
+          <div class="label-title">CNPJ:</div>
+          <label class="label-value" id="cnpj"></label>
+        </div>
+      
+        <div class="label-group">
+          <div class="label-title">Email:</div>
+          <label class="label-value" id="email"></label>
+        </div>
+      
+        <div class="label-group">
+          <div class="label-title">Telefone:</div>
+          <label class="label-value" id="telefone"></label>
+        </div>
+      
+        <h2>Endereço</h2>
+      
+        <div class="label-group">
+          <div class="label-title">Logradouro:</div>
+          <label class="label-value" id="logradouro"></label>
+        </div>
+      
+        <div class="label-group">
+          <div class="label-title">Número:</div>
+          <label class="label-value" id="numero"></label>
+        </div>
+      
+        <div class="label-group">
+          <div class="label-title">Complemento:</div>
+          <label class="label-value" id="complemento"></label>
+        </div>
+      
+        <div class="label-group">
+          <div class="label-title">Bairro:</div>
+          <label class="label-value" id="bairro"></label>
+        </div>
+      
+        <div class="label-group">
+          <div class="label-title">Cidade:</div>
+          <label class="label-value" id="cidade"></label>
+        </div>
+      
+        <div class="label-group">
+          <div class="label-title">Estado:</div>
+          <label class="label-value" id="uf"></label>
+        </div>
+      
+        <div class="label-group">
+          <div class="label-title">CEP:</div>
+          <label class="label-value" id="cep"></label>
+        </div>
+      
+        <div class="label-group">
+          <div class="label-title">País:</div>
+          <label class="label-value" id="pais"></label>
+        </div>
+      
+        <div>
+          <button type="submit" class="logout-btn" style="margin-top: 20px;">Buscar</button>
+        </div>
+      </form>
+      
+
+      <a class="voltar-link" href="../Geral/telaInicial.html">← Voltar</a>
+    </div>
+  </main>
+  <footer class="footer">
+    <p>&copy; 2023 Sistema de Visitas Empresariais. Todos os direitos reservados.</p>
+  </footer>
+</body>
+</html>

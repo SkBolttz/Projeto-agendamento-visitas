@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+    <link rel="stylesheet" href="../../CSS/Login/login.css">
+</head>
+
+<body>
+
+    <img src="../../IMAGE/background-register.jpg" alt="Imagem de uma empresa">
+
+    <div class="container">
+        <h2>Login</h2>
+        <form id="loginForm">   
+            <label for="nome">Nome:</label>
+            <input type="text" id="nome" required><br>
+
+            <label for="senha">Senha:</label>
+            <input type="password" id="senha" required><br>
+
+            <div>
+                <p class="loginErro">🔴 Nome de usuário ou senha incorretos</p>
+            </div>
+
+            <button type="submit">Entrar</button>
+            <button type="button" onclick="window.location.href = 'register.html';">Registrar</button>
+        </form>
+    </div>
+
+    <script src="../../JS/Login/login.js"></script>
+</body>
+
+</html>

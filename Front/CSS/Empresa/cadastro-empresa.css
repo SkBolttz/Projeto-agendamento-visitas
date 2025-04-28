@@ -1,0 +1,73 @@
+
+.container {
+    max-width: 700px;
+    margin: 40px auto;
+    background-color: white;
+    padding: 40px;
+    border-radius: 10px;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+}
+
+h1, h2 {
+    text-align: center;
+    color: #444;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+    align-items: center;
+    justify-content: center;
+}
+
+form h2 {
+    grid-column: span 2;
+}
+
+label {
+    font-weight: bold;
+}
+
+input {
+    width: 100%;
+    padding: 10px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+}
+
+button {
+    grid-column: span 2;
+    padding: 12px;
+    background-color: green;
+    color: white;
+    font-weight: bold;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-top: 20px;
+}
+
+button:hover {
+    background-color: darkgreen;
+}
+
+.sucesso, .erroCadastro {
+    background-color: green;
+    border-radius: 10px;
+    padding: 10px;
+    margin: 10px;
+    align-items: center;
+    justify-content: center;
+    display: flex;
+    color: white;
+    font-weight: bold;
+    text-align: center;
+    display: none;
+}
+
+.erroCadastro{
+
+    background-color: red;
+}

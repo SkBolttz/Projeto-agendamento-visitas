@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <title>Cadastro de Empresa</title>
+    <link rel="stylesheet" href="../../CSS/Empresa/cadastro-empresa.css">
+    <link rel="stylesheet" href="../../CSS/Geral/global.css">
+    <link rel="stylesheet" href="../../CSS/Geral/slidebar.css" />
+    <script src="../../JS/Empresa/cadastrarEmpresa.js"></script>
+    <script src="../../JS/Geral/global.js"></script>
+    <script src="../../JS/Geral/configuracoes.js"></script>
+</head>
+<body>
+  <header>
+    <div class="user-info">
+      <span>Bem-vindo, <strong><span id="username">Usuário</span></strong></span>
+      <button type="button" class="logout-btn" onclick="sair()">Sair</button>
+      <button class="open-sidebar-btn" onclick="toggleSidebar()">☰ Menu</button>
+
+      <div id="sidebar" class="sidebar">
+        <button class="close-btn" onclick="toggleSidebar()">×</button>
+        <ul>
+          <li><a href="../Geral/telaInicial.html">🏠 Início</a></li>
+          <li><a href="../Visita/agendarVisita.html">📅 Agendar Visita</a></li>
+          <li><a href="../Geral/telaInicial.html">📋 Minhas Visitas</a></li>
+          <li><a href="../Visitante/cadastro-visitante.html">👤 Cadastrar Visitante</a></li>
+          <li><a href="../Empresa/cadastro-empresa.html">🏢 Cadastrar Empresa</a></li>
+          <li><a href="../Geral/configuracao.html">⚙️ Configurações</a></li>
+          <p><strong>Empresa:</strong></p>
+          <li><a href="../Empresa/atualizarEmpresa.html">🏢 Alterar Cadastro</a></li>
+          <li><a href="../Empresa/desativarEmpresa.html">🏢 Desativar Empresa</a></li>
+          <li><a href="../Empresa/buscarEmpresa.html">🏢 Buscar Empresa</a></li>
+          <li><a href="../Empresa/reativarEmpresa.html">🏢 Reativar Empresa</a></li>
+          <p><strong>Visitante:</strong></p>
+          <li><a href="../Visitante/atualizarVisitante.html">👤 Alterar Visitante</a></li>
+          <li><a href="../Visitante/desativarVisitante.html">👤 Desativar Visitante</a></li>
+          <li><a href="../Visitante/buscarVisitante.html">👤 Buscar Visitante</a></li>
+          <li><a href="../Visitante/reativarVisitante.html">👤 Reativar Visitante</a></li>
+          <p><strong>Visita:</strong></p>
+          <li><a href="../Visita/consultarVisita.html">📋 Consultar Visita</a></li>
+          <li><a href="../Visita/cancelarVisita.html">📋 Cancelar Visita</a></li>
+          <li><a href="../Visita/atualizarVisita.html">📋 Atualizar Status</a></li>
+        </ul>
+      </div>
+    </div>
+    
+  </header>
+
+    <div class="container">
+        <h1>Cadastro de Empresa</h1>
+        <form id="formEmpresa">
+
+            <label for="nome_fantasia">Nome Fantasia:</label>
+            <input type="text" id="nome_fantasia" name="nome_fantasia" required >  
+            
+            <label for="razao_social">Razão Social:</label>
+            <input type="text" id="razao_social" name="razao_social" required>
+
+            <label for="cnpj">CNPJ:</label>
+            <input type="text" id="cnpj" name="cnpj" required>
+
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" required>
+
+            <label for="telefone">Telefone:</label>
+            <input type="text" id="telefone" name="telefone" required>
+
+            <h2>Endereço</h2>
+
+            <label for="logradouro">Logradouro:</label>
+            <input type="text" id="logradouro" name="logradouro" required>
+
+            <label for="numero">Número:</label>
+            <input type="text" id="numero" name="numero" required>
+
+            <label for="complemento">Complemento:</label>
+            <input type="text" id="complemento" name="complemento">
+
+            <label for="bairro">Bairro:</label>
+            <input type="text" id="bairro" name="bairro" required>
+
+            <label for="cidade">Cidade:</label>
+            <input type="text" id="cidade" name="cidade" required>
+
+            <label for="estado">Estado:</label>
+            <input type="text" id="estado" name="estado" required>
+
+            <label for="cep">CEP:</label>
+            <input type="text" id="cep" name="cep" required>
+
+            <label for="pais">País:</label>
+            <input type="text" id="pais" name="pais" required>
+
+            
+            <div>
+                <p class="sucesso">Empresa cadastrada com sucesso!</p>
+            </div>
+
+            <div>
+                <p class="erroCadastro">🔴 Empresa já cadastrada, verifique os dados!</p>
+            </div>
+            <button type="submit" class="buttonConfirm">Cadastrar Empresa</button>
+        </form>
+        <a class="voltar-link" href="../Geral/telaInicial.html">← Voltar</a>
+            </div>
+            <footer class="footer">
+              <p>&copy; 2023 Sistema de Visitas Empresariais. Todos os direitos reservados.</p>
+            </footer>
+</body>
+</html>
